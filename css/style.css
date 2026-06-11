@@ -1,0 +1,281 @@
+@charset "UTF-8";
+/* Підключення фрифтів */
+/* Google Fonts (Plugin) */
+/* Локальне підключення шрифтів */
+@import url("reset.css");
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia-Italic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+/* .... */
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/Arial-ItalicMT.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+/* Скидання стилів */
+/* Скидання змінних */
+:root {
+  --color-light-xl: #fff;
+  --color-light-l: #f6f6f6;
+  --color-light-s: #fafafa;
+  --color-dark-s: #cdcdcd;
+  --color-dark-m: #b2b2b2;
+  --color-dark-l: #545454;
+  --color-dark-xl: #4c4c4c;
+  --color-dark-2xl: #444;
+  --color-dark-3xl: #292929;
+  --color-primary: #f1cdb3;
+  --color-primary-light: #fddcc4;
+  --start-screen-gradient-background: #211f20;
+  --footer-gradient-background: #211f20;
+  --font-family: "Georgia", sans-serif;
+  --second-family: "Arial", sans-serif;
+  --third-family: "Inter", sans-serif;
+}
+
+/* Основні стилі */
+body {
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 148%;
+  color: var(--dark);
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: clip; /* clip */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+.wrapper > main {
+  flex-grow: 1;
+}
+
+/* --------------------- */
+[class*=__container] {
+  max-width: 1230px;
+  padding-inline: 15px;
+  margin: 0 auto;
+}
+
+/* --------------------- */
+/* Стилі для header */
+.header {
+  position: fixed;
+  inset-inline: 0;
+  padding-block-start: 30px;
+  background: url(../img/image/background.webp) 0 0/cover no-repeat scroll;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  display: grid;
+}
+.header__logo-title {
+  font-family: var(--font-family);
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+}
+.header__logo-text {
+  font-family: var(--second-family);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: var(--color-light-xl);
+}
+.menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  line-height: 1.6;
+}
+.menu__item {
+  font-family: var(--second-family);
+  font-size: 15px;
+  color: var(--color-dark-s);
+}
+.menu__link {
+  font-family: var(--second-family);
+  font-size: 15px;
+  color: var(--color-dark-s);
+}
+.menu__link:hover {
+  border-block-end: 3px solid var(--color-primary);
+}
+
+.icon-menu {
+  display: none;
+}
+
+/* Стилі для main */
+.page__hero {
+  padding-block-start: 11.25rem;
+  background: url(../img/image/background.webp) 0 0/cover no-repeat scroll;
+}
+.page__about {
+  padding-block: 80px 100px;
+}
+
+.hero__body {
+  display: flex;
+  -moz-column-gap: 2.625rem;
+       column-gap: 2.625rem;
+}
+.hero__component {
+  padding-block-start: 10.1875rem;
+}
+.hero__component :not(:last-child) {
+  margin-block-end: 2.625rem;
+}
+.hero__title {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 130%;
+  color: var(--color-light-xl);
+}
+.hero__text {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: var(--color-dark-s);
+}
+.hero__image {
+  aspect-ratio: 698/728;
+}
+.hero__image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about__blok {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-self: center;
+  justify-self: center;
+}
+.about__content {
+  order: 2;
+  width: 400px;
+}
+.about__img {
+  margin-inline-end: 120px;
+  order: 1;
+}
+.about__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Стилі для footer */
+.footer {
+  background: url(../img/image/background.webp) 0 0/cover no-repeat scroll;
+}
+.footer__container {
+  margin-block-start: 56px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 160px;
+}
+.footer__list {
+  flex-basis: 61.65%;
+  padding-block-start: 16px;
+  display: flex;
+  gap: 160px;
+}
+.footer__item:first-of-type {
+  width: 48%;
+}
+.footer__title {
+  font-size: 35px;
+  line-height: 1.3;
+  color: var(--color-light-xl);
+}
+.footer__imege {
+  width: 300px;
+}
+.footer__imege img {
+  aspect-ratio: 300/310;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.item-footer {
+  margin-block-start: 40px;
+}
+.item-footer__list:not(:last-child) {
+  margin-block-end: 40px;
+}
+.item-footer__list {
+  display: flex;
+  gap: 20px;
+}
+.item-footer__link {
+  line-height: 1.15;
+  color: var(--color-primary);
+}
+.item-footer__link:hover {
+  text-decoration: underline;
+}
+
+/* БЕМ елементі @import */
+.button {
+  border: 2px solid var(--color-primary);
+  border-radius: 6.25rem;
+  padding: 0.9375rem 2.8125rem;
+  font-size: 17px;
+  line-height: 1.3;
+  color: var(--color-dark-3xl);
+}
+.button__bograund {
+  background: var(--color-primary);
+}
+.button:hover {
+  color: var(--color-dark-3xl);
+  background: var(--color-primary-light);
+}
+
+.content__title {
+  font-size: 35px;
+  line-height: 1.3;
+  color: var(--color-dark-l);
+}
+.content__text {
+  font-family: var(--second-family);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-dark-xl);
+}
+.content__text :not(:last-child) {
+  margin-block-end: 25px;
+}
