@@ -233,12 +233,13 @@ body {
 .item-footer {
   margin-block-start: 40px;
 }
-.item-footer__list:not(:last-child) {
-  margin-block-end: 40px;
-}
 .item-footer__list {
   display: flex;
   gap: 20px;
+  align-items: center;
+}
+.item-footer__list:not(:last-child) {
+  margin-block-end: 40px;
 }
 .item-footer__link {
   line-height: 1.15;

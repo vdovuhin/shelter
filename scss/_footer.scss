@@ -46,12 +46,12 @@
 
 	// .item-footer__list
 	&__list {
-		&:not(:last-child) {
-			margin-block-end: 40px;
-		}
-
 		display: flex;
 		gap: 20px;
+		align-items: center;		
+		&:not(:last-child) {
+			margin-block-end: 40px;
+		}		
 	}
 	&__link-icons {
 	}
