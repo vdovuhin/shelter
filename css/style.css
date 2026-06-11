@@ -85,6 +85,7 @@ body {
 /* Стилі для header */
 .header {
   position: fixed;
+  z-index: 50;
   inset-inline: 0;
   padding-block-start: 30px;
   background: url(../img/image/background.webp) 0 0/cover no-repeat scroll;
@@ -144,6 +145,9 @@ body {
 .page__about {
   padding-block: 80px 100px;
 }
+.page__pets {
+  padding: 5.625rem;
+}
 
 .hero__body {
   display: flex;
@@ -195,6 +199,84 @@ body {
 .about__img img {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.pets {
+  background: var(--color-light-l);
+}
+.pets__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 3.75rem;
+}
+.pets__button {
+  align-items: flex-end;
+}
+
+.slider {
+  position: relative;
+  z-index: 0;
+}
+.slider__button {
+  border-radius: 50%;
+  border: 2px solid var(--color-primary);
+  display: flex;
+  padding: 19px;
+}
+.slider__button--prev {
+  position: absolute;
+  left: -10%;
+  top: 50%;
+}
+.slider__button--next {
+  position: absolute;
+  right: -10%;
+  top: 50%;
+  rotate: 180deg;
+}
+.slider__button:hover {
+  background: var(--color-primary-light);
+}
+.slider__track {
+  display: flex;
+  -moz-column-gap: 90px;
+       column-gap: 90px;
+}
+.slider__slide {
+  background: var(--color-light-s);
+  padding-block-end: 1.875rem;
+}
+
+.slide__image {
+  width: 100%;
+  height: 270px;
+}
+.slide__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.slide__image:not(:last-child) {
+  margin-block-end: 30px;
+}
+.slide__blok {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1.875rem;
+  padding-inline: 10px;
+}
+.slide__title {
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-l);
+}
+.slide__button {
+  align-items: flex-end;
 }
 
 /* Стилі для footer */

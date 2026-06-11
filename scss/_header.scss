@@ -1,5 +1,6 @@
 .header {
 	position: fixed;
+	z-index: 50;
 	inset-inline: 0;
 	padding-block-start: 30px;
 	background: url(../img/image/background.webp) 0 0 / cover no-repeat scroll;

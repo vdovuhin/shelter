@@ -8,6 +8,10 @@
 	&__about {
 		padding-block: 80px 100px;
 	}
+	// .page__pets
+	&__pets {
+		padding: 5.625rem;
+	}
 }
 //========================================================================================================================================================
 //	--- HERO ---
@@ -20,7 +24,6 @@
 	&__body {
 		display: flex;
 		column-gap: 2.625rem;
-		
 	}
 	// .hero__component
 	&__component {
@@ -69,25 +72,126 @@
 		grid-template-columns: 1fr 1fr;
 		align-self: center;
 
-justify-self: center;
+		justify-self: center;
 
-
-//height: 400px;
+		//height: 400px;
 	}
 	// .about__content
 	&__content {
 		order: 2;
 		width: 400px;
-
 	}
 	// .about__img
 	&__img {
 		margin-inline-end: 120px;
 		order: 1;
-	
+
 		img {
 			object-fit: cover;
 		}
 	}
 }
+//========================================================================================================================================================
+//	--- PETS ---
+//========================================================================================================================================================
+.pets {
+	background: var(--color-light-l);
+	// .pets__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		row-gap: 3.75rem;
+	}
+	// .pets__content
+	&__content {
+	}
+	// .pets__slider
+	&__slider {
+	}
+	// .pets__button
+	&__button {
+		align-items: flex-end;
+	}
+}
+.slider {
+	position: relative;
+	z-index: 0;
+	// .slider__swiper
+	&__swiper {
+	}
+	// .slider__button
+	&__button {
+		border-radius: 50%;
+		border: 2px solid var(--color-primary);
+		display: flex;
+		padding: 19px;
+		// .slider__button--prev
+		&--prev {
+			position: absolute;
+			left: -10%;
+			top: 50%;
+		}
+		// .slider__button--next
+		&--next {
+			position: absolute;
+			right: -10%;
+			top: 50%;
+			rotate: 180deg;
+		}
+		&:hover {
+			background: var(--color-primary-light);
+		}
+	}
 
+	// .slider__wrapper
+	&__wrapper {
+	}
+	// .slider__track
+	&__track {
+		display: flex;
+		column-gap: 90px;
+	}
+	// .slider__slide
+	&__slide {
+		background: var(--color-light-s);
+		padding-block-end: 1.875rem;
+	}
+}
+.slide {
+	// .slide__image
+	&__image {
+		width: 100%;
+		height: 270px; // Квадратная картинка питомца
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover; // Чтобы картинка не искажалась
+		}
+		&:not(:last-child) {
+			margin-block-end: 30px;
+		}
+	}
+	// .slide__blok
+	&__blok {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		row-gap: 1.875rem;
+		padding-inline: 10px;
+	}
+	// .slide__title
+	&__title {
+		font-size: 20px;
+		letter-spacing: 0.06em;
+
+		color: var(--color-dark-l);
+	}
+	// .slide__button
+	&__button {
+		align-items: flex-end;
+	}
+}
+//========================================================================================================================================================
