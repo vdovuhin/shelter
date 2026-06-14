@@ -6,11 +6,24 @@
 	}
 	// .page__about
 	&__about {
-		padding-block: 80px 100px;
+		padding-block: 5rem 6.25rem;
 	}
 	// .page__pets
 	&__pets {
 		padding: 5.625rem;
+	}
+	// .page__help
+	&__help {
+		padding-block: 5rem 6.25rem;
+	}
+	// .page__donation
+	&__donation {
+		padding-block: 5.0625rem 6.1875rem;
+	}
+	//	--- OUR-PETS
+	// .page__our-pets
+	&__our-pets {
+		padding-block-start: 7.5rem;
 	}
 }
 //========================================================================================================================================================
@@ -100,9 +113,10 @@
 	&__container {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		//align-items: center;
 		justify-content: center;
 		row-gap: 3.75rem;
+		text-align: center;
 	}
 	// .pets__content
 	&__content {
@@ -111,87 +125,103 @@
 	&__slider {
 	}
 	// .pets__button
-	&__button {
-		align-items: flex-end;
+	&__button {	
+		align-self: center;
 	}
 }
-.slider {
-	position: relative;
-	z-index: 0;
-	// .slider__swiper
-	&__swiper {
-	}
-	// .slider__button
-	&__button {
-		border-radius: 50%;
-		border: 2px solid var(--color-primary);
-		display: flex;
-		padding: 19px;
-		// .slider__button--prev
-		&--prev {
-			position: absolute;
-			left: -10%;
-			top: 50%;
-		}
-		// .slider__button--next
-		&--next {
-			position: absolute;
-			right: -10%;
-			top: 50%;
-			rotate: 180deg;
-		}
-		&:hover {
-			background: var(--color-primary-light);
-		}
-	}
 
-	// .slider__wrapper
-	&__wrapper {
-	}
-	// .slider__track
-	&__track {
+//========================================================================================================================================================
+//	--- HELP ---
+//========================================================================================================================================================
+.help {
+	// .help__container
+	&__container {
 		display: flex;
-		column-gap: 90px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 3.75rem;
 	}
-	// .slider__slide
-	&__slide {
-		background: var(--color-light-s);
-		padding-block-end: 1.875rem;
+	// .help__content
+	&__content {
 	}
-}
-.slide {
-	// .slide__image
-	&__image {
-		width: 100%;
-		height: 270px; // Квадратная картинка питомца
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover; // Чтобы картинка не искажалась
-		}
-		&:not(:last-child) {
-			margin-block-end: 30px;
-		}
+	// .help__cards
+	&__cards {
+		padding-inline: 6.25rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		column-gap: 120px;
+		row-gap: 3.4375rem;
 	}
-	// .slide__blok
-	&__blok {
+	// .help__card-link
+	&__card-link {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		row-gap: 1.875rem;
-		padding-inline: 10px;
 	}
-	// .slide__title
+}
+.card-link {
+	// .card-link__icon
+	&__icon {
+		//display: inline-block;
+		&:not(:last-child) {
+			margin-block-end: 2.625rem;
+		}
+	}
+	// .card-link__title
 	&__title {
 		font-size: 20px;
-		letter-spacing: 0.06em;
-
+		line-height: 1.15;
 		color: var(--color-dark-l);
-	}
-	// .slide__button
-	&__button {
-		align-items: flex-end;
 	}
 }
 //========================================================================================================================================================
+//	--- DONATION ---
+//========================================================================================================================================================
+.donation {
+	// .donation__container
+	&__container {
+	}
+	// .donation__body
+	&__body {
+		padding-inline: 6.25rem;
+		display: flex;
+		column-gap: 4.8125rem;
+	}
+	// .donation__imege
+	&__imege {
+	}
+	// .donation__content
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+}
+//========================================================================================================================================================
+//========================================================================================================================================================
+//========================================================================================================================================================
+//========================================================================================================================================================
+//========================================================================================================================================================
+//	--- OUR-PETS ---
+.our-pets {
+	// .our-pets__container
+	&__container {
+		padding-block: 5rem 6.25rem;
+		display: flex;
+		flex-direction: column;
+		//align-items: center;
+	}
+	// .our-pets__content
+	&__content {
+		text-align: center;
+	}
+	// .our-pets__slider
+	&__slider {
+
+	}
+}

@@ -1,9 +1,12 @@
 .header {
+	&--bg{
+	background: url(../img/image/background.webp) 0 0 / cover no-repeat scroll;
+	}
 	position: fixed;
 	z-index: 50;
 	inset-inline: 0;
 	padding-block-start: 30px;
-	background: url(../img/image/background.webp) 0 0 / cover no-repeat scroll;
+
 	// .header__container
 	&__container {
 		display: flex;
@@ -18,16 +21,23 @@
 	&__logo-title {
 		font-family: var(--font-family);
 		font-size: 32px;
-		line-height: 110%;
-		letter-spacing: 0.06em;
-		color: var(--color-primary);
+		line-height: 110%;	
+		color: var(--color-dark-l);		
+		&--bg{
+ 			color: var(--color-primary);			
+		}
 	}
 	// .header__logo-text
 	&__logo-text {
 		font-family: var(--second-family);
 		font-size: 13px;
 		letter-spacing: 0.1em;
-		color: var(--color-light-xl);
+		color: var(--color-dark-3xl);
+		&--bg{
+ 			color: var(--color-light-xl);			
+		}
+		
+
 	}
 	// .header__menu
 	&__menu {
@@ -59,7 +69,8 @@
 		color: var(--color-dark-s);
 		//border-block-end: 3px solid var(--footer-gradient-background);
 		&:hover {
-			border-block-end: 3px solid var(--color-primary);				
+			border-block-end: 3px solid var(--color-primary);	
+			color: var(--color-dark-l);			
 		}
 	}
 }

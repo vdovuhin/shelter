@@ -7,7 +7,7 @@
 	<meta charset="UTF-8">
 	<!-- Налаштування в'юпорту (адаптиву, масштабу тощо) -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Відкрити усі вкладки в новій вкладці -->
+
 
 	<!-- Підключення окремого файлу стилів -->
 	<link rel="stylesheet" href="css/style.css">
@@ -18,11 +18,11 @@
 
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<header class="header header--bg">
 			<div class="header__container">
 				<div class="header__logo">
-					<div class="header__logo-title">Cozy House</div>
-					<span class="header__logo-text">Shelter for pets in Boston</span>
+					<div class="header__logo-title header__logo-title--bg">Cozy House</div>
+					<span class="header__logo-text header__logo-text--bg">Shelter for pets in Boston</span>
 				</div>
 				<nav class="header__menu menu">
 					<button class="icon-menu" type="button" aria-label="Open menu"><span></span></button>
@@ -118,20 +118,20 @@
 									<!-- 2 слайд -->
 									<div class="slider__slide slide">
 										<div class="slide__image">
-											<img src="img/image/pets/01.webp" alt="Первый слайд">
+											<img src="img/image/pets/02.webp" alt="Первый слайд">
 										</div>
 										<div class="slide__blok">
-											<h3 class="slide__title">Katrine</h3>
+											<h3 class="slide__title">Jennifer</h3>
 											<a href="#" class="slide__button button">Learn more</a>
 										</div>
 									</div>
 									<!-- 3 слайд -->
 									<div class="slider__slide slide">
 										<div class="slide__image">
-											<img src="img/image/pets/01.webp" alt="Первый слайд">
+											<img src="img/image/pets/03.webp" alt="Первый слайд">
 										</div>
 										<div class="slide__blok">
-											<h3 class="slide__title">Katrine</h3>
+											<h3 class="slide__title">Woody</h3>
 											<a href="#" class="slide__button button">Learn more</a>
 										</div>
 									</div>
@@ -142,48 +142,87 @@
 							<img src="img/svg/arrow.svg" alt="arrow">
 						</button>
 					</div>
-					<a href="" class="pets__button button button__bograund">Get to know the rest</a>
-
-
+					<a href="our-pets.html" target="blank" class="pets__button button button__bograund">Get to know the rest</a>
 				</div>
 			</section>
-			<!-- 
-
-			<section class="page__best-gifts best-gifts" id="support">
-				<div class="best-gifts__container">
-					<div class="best-gifts__content">
-						<h2 class="best-gifts__title">Support our shelter</h2>
-						<p class="best-gifts__text">Your help provides food, medicine, and safe housing for animals in need.</p>
+			<section class="page__help help" id="support">
+				<div class="help__container">
+					<div class="help__content content">
+						<h2 class="content__title">
+							How you can help our shelter
+						</h2>
 					</div>
-					<div class="best-gifts__cards">
-						<div class="best-gifts__card">
-							<h3 class="best-gifts__card-title">Donate</h3>
-							<p class="best-gifts__card-text">Help cover food and care expenses.</p>
+					<div class="help__cards">
+						<a href="#" class="help__card-link card-link">
+							<img src="img/svg/food.svg" alt="food" class="card-link__icon">
+							<h4 class="card-link__title">Donate</h4>
+						</a>
+						<a href="#" class="help__card-link card-link">
+							<img src="img/svg/transportation.svg" alt="transportation" class="card-link__icon">
+							<h4 class="card-link__title">Transportation</h4>
+						</a>
+						<a href="#" class="help__card-link card-link">
+							<img src="img/svg/toys.svg" alt="toys" class="card-link__icon">
+							<h4 class="card-link__title">Toys</h4>
+						</a>
+						<a href="#" class="help__card-link card-link">
+							<img src="img/svg/bowls-and-cups.svg" alt="bowls-and-cups" class="card-link__icon">
+							<h4 class="card-link__title">Bowls and cups</h4>
+						</a>
+						<a href="#" class="help__card-link card-link">
+							<img src="img/svg/shampoos.svg" alt="shampoos" class="card-link__icon">
+							<h4 class="card-link__title">Shampoos</h4>
+						</a>
+						<a href="#" class="help__card-link card-link">
+							<img src="img/svg/vitamins.svg" alt="vitamins" class="card-link__icon">
+							<h4 class="card-link__title">Vitamins</h4>
+						</a>
+						<a href="#" class="help__card-link card-link">
+							<img src="img/svg/medicines.svg" alt="medicines" class="card-link__icon">
+							<h4 class="card-link__title">Medicines</h4>
+						</a>
+						<a href="#" class="help__card-link card-link">
+							<img src="img/svg/collars-or-leashes.svg" alt="collars-or-leashes" class="card-link__icon">
+							<h4 class="card-link__title">Collars / leashes</h4>
+						</a>
+						<a href="#" class="help__card-link card-link">
+							<img src="img/svg/sleeping-area.svg" alt="sleeping-area" class="card-link__icon">
+							<h4 class="card-link__title">Sleeping areas</h4>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="page__donation donation">
+				<div class="donation__container">
+					<div class="donation__body">
+						<div class="donation__imege">
+							<img src="img/image/donation-dog.webp" alt="dog">
 						</div>
-						<div class="best-gifts__card">
-							<h3 class="best-gifts__card-title">Volunteer</h3>
-							<p class="best-gifts__card-text">Give your time and love to animals.</p>
-						</div>
-						<div class="best-gifts__card">
-							<h3 class="best-gifts__card-title">Share</h3>
-							<p class="best-gifts__card-text">Tell friends about our shelter.</p>
+						<div class="donation__content content">
+							<h2 class="content__title">We help pets find loving families</h2>
+							<div class="content__sab-title">Name of the bank / Type of bank account</div>
+							<article class="content__card card">
+								<a href="" class="card__link-icon">
+									<img src="img/svg/credit-card.svg" alt="">
+								</a>
+								<h3 class="card__title">
+									<a href="" class="card__link">8380 2880 8028 8791 7435</a>
+								</h3>
+							</article>
+
+							<div class="content__text">
+								<p>
+									Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ipsum at
+									libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et vulputate. Interdum et
+									malesuada fames ac ante ipsum primis in faucibus.
+								</p>
+
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-
-			<section class="page__cta cta">
-				<div class="cta__container">
-					<div class="cta__content">
-						<h2 class="cta__title">Ready to change a life?</h2>
-						<p class="cta__text">Adopt a pet or support our shelter today.</p>
-						<a href="#contact" class="cta__button button">Get involved</a>
-					</div>
-				</div>
-			</section> -->
-
 		</main>
-
 		<footer class="footer">
 			<div class="footer__container">
 				<div class="footer__list">
