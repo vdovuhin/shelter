@@ -90,7 +90,7 @@ body {
   position: fixed;
   z-index: 50;
   inset-inline: 0;
-  padding-block-start: 30px;
+  padding-block-start: 1.875rem;
 }
 .header__container {
   display: flex;
@@ -100,10 +100,14 @@ body {
 .header__logo {
   display: grid;
 }
+.header__logo--link:hover {
+  border-block-end: 3px solid var(--color-primary);
+  color: var(--color-dark-l);
+}
 .header__logo-title {
   font-family: var(--font-family);
   font-size: 32px;
-  line-height: 110%;
+  line-height: 1.1;
   color: var(--color-dark-l);
 }
 .header__logo-title--bg {
@@ -123,7 +127,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 35px;
+  gap: 2.1875rem;
   line-height: 1.6;
 }
 .menu__item {
@@ -161,6 +165,9 @@ body {
 }
 .page__donation {
   padding-block: 5.0625rem 6.1875rem;
+}
+.page__our-hero {
+  display: none;
 }
 .page__our-pets {
   padding-block-start: 7.5rem;
@@ -207,7 +214,13 @@ body {
 }
 .about__content {
   order: 2;
-  width: 400px;
+  max-width: 430px;
+}
+.about__content h2 {
+  max-width: 350px;
+}
+.about__content :not(:last-child) {
+  margin-block-end: 25px;
 }
 .about__img {
   margin-inline-end: 120px;
@@ -285,6 +298,9 @@ body {
 }
 .our-pets__content {
   text-align: center;
+}
+.our-pets__content:not(:last-child) {
+  margin-block-end: 75px;
 }
 /* Стилі для footer */
 .footer {
@@ -383,24 +399,28 @@ body {
 .content__text :not(:last-child) {
   margin-block-end: 25px;
 }
-.slider {
+.slider__swiper {
   position: relative;
   z-index: 0;
 }
 .slider__button {
+  width: 52px;
+  aspect-ratio: 52/52;
   border-radius: 50%;
   border: 2px solid var(--color-primary);
   display: flex;
-  padding: 19px;
+  align-items: center;
+  justify-content: center;
+  padding: 1.1875rem;
 }
 .slider__button--prev {
   position: absolute;
-  left: -10%;
+  left: 0;
   top: 50%;
 }
 .slider__button--next {
   position: absolute;
-  right: -10%;
+  right: 0;
   top: 50%;
   rotate: 180deg;
 }
@@ -411,10 +431,11 @@ body {
   margin-block-end: 45px;
 }
 .slider__track {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  display: flex;
   -moz-column-gap: 90px;
        column-gap: 90px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .slider__track--gap {
   gap: 40px;
@@ -422,23 +443,39 @@ body {
 .slider__slide {
   background: var(--color-light-s);
   padding-block-end: 1.875rem;
+  border-radius: 9px;
+  width: 280px;
+}
+.slider__slide:hover {
+  box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+  background: var(--color-light-xl);
+}
+.slider__slide:hover .slide__button {
+  color: var(--color-dark-3xl);
+  background: var(--color-primary-light);
 }
 .slider__navigation {
   display: flex;
   align-items: center;
   justify-content: center;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
 }
 .slider__paginator {
+  width: 3.25rem;
+  aspect-ratio: 52/52;
   text-align: center;
   border: 2px solid var(--color-primary);
   border-radius: 50%;
-  padding: 0.875rem 1.3125rem;
+  padding: 0.6875rem 0.6125rem;
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
   color: var(--color-dark-3xl);
+}
+.slider__paginator:hover {
+  color: var(--color-dark-3xl);
+  background: var(--color-primary-light);
 }
 
 .slide__image img {

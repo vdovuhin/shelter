@@ -70,27 +70,32 @@
 }
 //========================================================================================================================================================
 .slider {
-	position: relative;
-	z-index: 0;
+
 	// .slider__swiper
 	&__swiper {
+			position: relative;
+	z-index: 0;
 	}
 	// .slider__button
 	&__button {
+		width: 52px;
+		aspect-ratio: 52 / 52;
 		border-radius: 50%;
 		border: 2px solid var(--color-primary);
 		display: flex;
-		padding: 19px;
+		align-items: center;
+		justify-content: center;
+		padding: 1.1875rem;
 		// .slider__button--prev
 		&--prev {
 			position: absolute;
-			left: -10%;
+			left: 0;
 			top: 50%;
 		}
 		// .slider__button--next
 		&--next {
 			position: absolute;
-			right: -10%;
+			right: 0;
 			top: 50%;
 			rotate: 180deg;
 		}
@@ -105,11 +110,15 @@
 		}
 	}
 	// .slider__track
-	&__track {		
-		display: grid;
-		grid-template-columns:  repeat(auto-fill, minmax(270px,1fr));
+	&__track {
+	
+		display: flex;
+	
 		column-gap: 90px;
-		&--gap{
+		justify-content: center;
+		flex-wrap: wrap;
+	
+		&--gap {
 			gap: 40px;
 		}
 	}
@@ -117,27 +126,43 @@
 	&__slide {
 		background: var(--color-light-s);
 		padding-block-end: 1.875rem;
-		
+		border-radius: 9px ;
+		width: 280px;
+
+		&:hover {
+			box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+			background: var(--color-light-xl);
+
+			.slide__button {
+				color: var(--color-dark-3xl);
+				background: var(--color-primary-light);
+			}
+		}
 	}
 	// .slider__navigation
 	&__navigation {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		column-gap: 20px;
+		column-gap: 1.25rem;
 	}
 	// .slider__paginator
 	&__paginator {
+		width: 3.25rem;
+		aspect-ratio: 52 / 52;
 		text-align: center;
 		border: 2px solid var(--color-primary);
 		border-radius: 50%;
-		padding: 0.875rem 1.3125rem;
+		padding: 0.6875rem 0.6125rem;
 
-	
 		font-size: 20px;
-		line-height: 1.15;		
+		line-height: 1.15;
 		text-align: center;
 		color: var(--color-dark-3xl);
+		&:hover {
+		color: var(--color-dark-3xl);
+		background: var(--color-primary-light);
+	}
 	}
 }
 //========================================================================================================================================================
@@ -145,7 +170,6 @@
 .slide {
 	// .slide__image
 	&__image {
-		
 		img {
 			width: 100%;
 			height: 100%;

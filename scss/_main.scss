@@ -21,6 +21,10 @@
 		padding-block: 5.0625rem 6.1875rem;
 	}
 	//	--- OUR-PETS
+	//.page__our-hero
+	&__our-hero{
+		display: none;
+	}
 	// .page__our-pets
 	&__our-pets {
 		padding-block-start: 7.5rem;
@@ -92,7 +96,13 @@
 	// .about__content
 	&__content {
 		order: 2;
-		width: 400px;
+		max-width: 430px;
+		h2{
+			max-width: 350px;
+		}
+		:not(:last-child) {
+			margin-block-end: 25px;
+		}
 	}
 	// .about__img
 	&__img {
@@ -129,7 +139,6 @@
 		align-self: center;
 	}
 }
-
 //========================================================================================================================================================
 //	--- HELP ---
 //========================================================================================================================================================
@@ -219,6 +228,9 @@
 	// .our-pets__content
 	&__content {
 		text-align: center;
+		&:not(:last-child) {
+			margin-block-end: 75px;
+		}
 	}
 	// .our-pets__slider
 	&__slider {
