@@ -3,23 +3,31 @@
 	// .footer__container
 	&__container {
 		margin-block-start: 56px;
-		display: flex;
-		flex-wrap: wrap;
-		gap: 160px;
+		display: flex;	
+		flex-wrap: wrap;	
+		justify-content: space-between;
+		align-items: center;
+		gap: 50px;	
+		@media (max-width: 998px) {
+			justify-content: center;
+		}
 	}
 	// .footer__list
-	&__list {
-		flex-basis: 61.65%;
+	&__list {		
 		padding-block-start: 16px;
 		display: flex;
-		gap: 160px;
-	
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		gap: 50px;	
+		@media (max-width: 660px) {
+			justify-content: center;
+		}
 	}
 	// .footer__item
 	&__item {
-		&:first-of-type{
-			width: 48%;
-		}
+		flex-basis: 300px;
+		
 	}
 	// .footer__title
 	&__title {
@@ -35,7 +43,7 @@
 	&__imege {
 		width: 300px;
 		img {
-			//width: 100%;
+			width: 100%;
 			aspect-ratio: 300/310;
 			object-fit: cover;
 		}
