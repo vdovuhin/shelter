@@ -70,11 +70,22 @@
 }
 //========================================================================================================================================================
 .slider {
-
 	// .slider__swiper
 	&__swiper {
-			position: relative;
-	z-index: 0;
+		position: relative;
+		z-index: 0;
+	}
+	// .slider__buttons
+	&__buttons {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media (min-width: 770px) {
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 50%;
+		}
 	}
 	// .slider__button
 	&__button {
@@ -88,15 +99,11 @@
 		padding: 1.1875rem;
 		// .slider__button--prev
 		&--prev {
-			position: absolute;
-			left: 0;
-			top: 50%;
+		
 		}
 		// .slider__button--next
 		&--next {
-			position: absolute;
-			right: 0;
-			top: 50%;
+			
 			rotate: 180deg;
 		}
 		&:hover {
@@ -105,19 +112,23 @@
 	}
 	// .slider__wrapper
 	&__wrapper {
+		display: flex;
+		justify-content: center;
 		&:not(:last-child) {
 			margin-block-end: 45px;
 		}
 	}
 	// .slider__track
 	&__track {
-	
+		max-width: 990px;
 		display: flex;
-	
 		column-gap: 90px;
 		justify-content: center;
 		flex-wrap: wrap;
-	
+		@media (max-width: 770px) {
+			width: 710px;
+			overflow: hidden;
+		}
 		&--gap {
 			gap: 40px;
 		}
@@ -126,8 +137,8 @@
 	&__slide {
 		background: var(--color-light-s);
 		padding-block-end: 1.875rem;
-		border-radius: 9px ;
-		width: 280px;
+		border-radius: 9px;
+		width: 200px;
 
 		&:hover {
 			box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
@@ -160,9 +171,9 @@
 		text-align: center;
 		color: var(--color-dark-3xl);
 		&:hover {
-		color: var(--color-dark-3xl);
-		background: var(--color-primary-light);
-	}
+			color: var(--color-dark-3xl);
+			background: var(--color-primary-light);
+		}
 	}
 }
 //========================================================================================================================================================
@@ -192,7 +203,6 @@
 	&__title {
 		font-size: 20px;
 		letter-spacing: 0.06em;
-
 		color: var(--color-dark-l);
 	}
 	// .slide__button
