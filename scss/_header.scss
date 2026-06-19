@@ -83,6 +83,14 @@
 }
 .icon-menu {
 	display: none;
+	&--bg {
+			span,
+		&::before,
+		&::after{
+			background-color:  #000;	
+		}
+		
+	}
 	@media (max-width: 640px) {
 		display: inline-block;
 		width: 30px;
