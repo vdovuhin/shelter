@@ -170,6 +170,9 @@ body {
     height: 2px;
     background-color: var(--color-primary);
   }
+  .icon-menu--bg span, .icon-menu::before, .icon-menu::after {
+    background-color: #000;
+  }
   .icon-menu::before {
     top: 0;
     left: 0;
